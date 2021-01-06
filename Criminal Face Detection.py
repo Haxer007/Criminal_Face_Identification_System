@@ -168,6 +168,8 @@ def main():
             criminals = []
 
             print("Successfully Deleted Training Model")
+        if opt == '4':
+            break
 
 
 if __name__ == "__main__":
