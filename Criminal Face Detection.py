@@ -5,8 +5,7 @@ from os import system
 from os import listdir
 from os.path import isfile, join
 from pickle import dump, load
-
-face_cascade = cv2.CascadeClassifier('resources/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('./haar.xml')
 model = cv2.face_LBPHFaceRecognizer.create()
 plot = []
 criminals = []
@@ -15,18 +14,19 @@ criminals = []
 try:
     with open("criminals.pickle", "rb") as f:
         criminals = load(f)
-    system("mkdir data")
-    system("model")
-    system("cd model")
-    system("copy NUL trained.xml")
-    system("cd ..")
+
 except:
     pass
-#End of Pickle
+
+
+
+
+
+# End of Pickle
 
 def enroll_data(name):
     global model
-    count = (len(criminals)-1)*100
+    count = (len(criminals) - 1) * 100
     system("mkdir data\\" + name)
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     while (True):
@@ -62,7 +62,7 @@ def enroll_data(name):
     path_train = "data/" + name + "/"
     train_data, labels = [], []
     files = [f for f in listdir(path_train) if isfile(join(path_train, f))]
-    for i, file in enumerate(files,start=(len(criminals)-1)*100):
+    for i, file in enumerate(files, start=(len(criminals) - 1) * 100):
         img_path = path_train + '/' + files[i]
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
         train_data.append(np.asarray(img, dtype=np.uint8))
@@ -107,7 +107,7 @@ def detect():
                     if result[1] < 200:
                         confidence = float('{0:.2f}'.format(100 * (1 - (result[1]) / 300)))
                         plot.append(confidence)
-                        if confidence > 86:
+                        if confidence > 85:
                             label = label + str(confidence) + '%'
                             cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 255))
                             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
@@ -118,7 +118,7 @@ def detect():
 
                 except Exception as e:
                     print(e)
-        cv2.resize(img,(1024,728))
+        cv2.resize(img, (1024, 728))
         cv2.imshow("Face Detector", img)
         if (cv2.waitKey(1) & 0xFF == ord('q')):
             cv2.destroyWindow("Face Detector")
@@ -128,6 +128,10 @@ def detect():
 
 
 def main():
+
+    system("mkdir data")
+    system("mkdir model")
+    system("copy NUL model\\trained.xml")
     global plot, criminals
     while (True):
         print("-------------------------------------------------------")
@@ -163,7 +167,6 @@ def main():
             system("copy NUL model\\trained.xml")
             system("copy NUL criminals.pickle")
             system("DEL /F/Q/S data\\*.*")
-
 
             criminals = []
 
