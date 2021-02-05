@@ -1,3 +1,4 @@
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -148,6 +149,7 @@ def main():
             enroll_data(name)
             with open("criminals.pickle", "wb") as f:
                 dump(criminals, f)
+            continue
 
         if opt == '2':
             detect()
@@ -161,6 +163,7 @@ def main():
                 plt.show()
             except:
                 pass
+            continue
 
         if opt == '3':
             system("copy NUL model\\trained.xml")
@@ -170,8 +173,15 @@ def main():
             criminals = []
 
             print("Successfully Deleted Training Model")
-        if opt == '4':
+            continue
+        if opt == '4' or 'q':
             break
+        if opt == 'r' or 'R':
+            print("Installing requirements:")
+            system("pip install opencv-contrib-python")
+            system("pip install pickle")
+            print("Successfulll!!!\n")
+            continue
 
 
 if __name__ == "__main__":
