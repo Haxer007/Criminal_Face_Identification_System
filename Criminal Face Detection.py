@@ -5,7 +5,7 @@ from os import system
 from os import listdir
 from os.path import isfile, join
 from pickle import dump, load
-face_cascade = cv2.CascadeClassifier('./haar.xml')
+face_cascade = cv2.CascadeClassifier('./face_cascade.xml')
 model = cv2.face_LBPHFaceRecognizer.create()
 plot = []
 criminals = []
@@ -103,7 +103,6 @@ def detect():
                 try:
                     result = model.predict(roi)
                     label = str(result[0]) + " " + str(round(result[1])) + " "
-                    print(label)
                     if result[1] < 200:
                         confidence = float('{0:.2f}'.format(100 * (1 - (result[1]) / 300)))
                         plot.append(confidence)
