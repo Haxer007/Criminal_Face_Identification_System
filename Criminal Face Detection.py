@@ -171,7 +171,7 @@ def detect():
     cv2.destroyAllWindows()
 
 def train_unknowns():
-    path_train = "Unknown/"                                                 # Train Path for Unknown Faces
+    path_train = "Unknown Data/"                                                 # Train Path for Unknown Faces
     train_data, labels = [], []
     files = [f for f in listdir(path_train) if isfile(join(path_train, f))]
     for i, file in enumerate(files, start=0):
