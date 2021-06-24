@@ -1,4 +1,4 @@
-# Criminal Face Identification System
+# Criminal Face Recognition System
 ## Introduction:
 **What is Face Identification System?**
 
@@ -13,7 +13,7 @@ is in the database of Police Department.
 
  The process of identification is based on face recognition, which is further divided into
  three steps:
-- **Training Data Gathering:** Gather face data (face images in this case) of the persons you want to recognize
+- **Training Data Collection:** Gather face data (face images in this case) of the persons you want to recognize
 - **Training of Recognizer:** Feed that face data (and respective names of each face) to the face recognizer so that it can learn.
 - **Recognition:** Feed new faces of the persons and see if the face recognizer you just trained recognizes them.
 
