@@ -178,7 +178,7 @@ def detect():
 
 
 def train_unknowns():
-    path_train = "Unknown/"  # Unknown Facedata Path
+    path_train = "Unknown Data/"  # Unknown Facedata Path
     train_data, labels = [], []
     files = [f for f in listdir(path_train) if isfile(join(path_train, f))]
     for i, file in enumerate(files, start=0):
