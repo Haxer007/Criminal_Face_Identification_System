@@ -1,4 +1,4 @@
-# Criminal Face Recognition System
+# Criminal Face Identification System
 ## Introduction:
 **What is Face Identification System?**
 
@@ -18,9 +18,13 @@ The working of code can be boiled down to three main processes namely :
 
 
 
- The process of identification is based on face recognition, which is further divided into
- three steps:
-- **Training Data Collection:** Gather face data (face images in this case) of the persons you want to recognize
-- **Training of Recognizer:** Feed that face data (and respective names of each face) to the face recognizer so that it can learn.
-- **Recognition:** Feed new faces of the persons and see if the face recognizer you just trained recognizes them.
+**Face Detection :** 
+Face Detection is done using MediaPipe FaceMesh model which employs a machine learning approach for visual object detection which is capable of processing images extremely rapidly and achieving high detection rates.
+**Face Identification :**
+Face Identification is performed using Local Binary Pattern Histograms(LBPH)
+The entire process of code can be divided into these three processes :
+*Face Detection - Running FaceMesh model from MediaPipe library on each Frame of video
+Training LBPH Face recognizer - Training the LBPH recognizer on stored facial images.
+Prediction – Check if the face recognizer predicts correctly for the detected face on test images or video.*
+![image](https://user-images.githubusercontent.com/73170547/129151381-09a34e60-0a74-411b-9c39-77907f81dfc4.png)
 
