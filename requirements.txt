@@ -1,3 +1,6 @@
 pip install opencv-contrib-python
 pip install numpy
 pip install pickle
+pip install matplotlib
+pip install mediapipe
+pip install imutils
