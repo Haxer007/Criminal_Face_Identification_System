@@ -1,4 +1,8 @@
 # Criminal Face Identification System
+  A surveillance system to identify known criminals or suspects in real-time through IP Cameras.
+  This project makes use of various machine learning models to identify criminal/suspect faces 
+  effectively in live video stream of a lighting-controlled environment. The goal of this project
+  is to help law enforcement agencies to ease their work of monitoring suspects in real-time.
 ## Introduction:
 **What is Face Identification System?**
 
