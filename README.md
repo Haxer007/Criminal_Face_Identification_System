@@ -8,6 +8,7 @@
   
 ### ML Libraries used
    FaceMesh from MediaPipe Library (For Face Detection and Extraction)
+   
    Local Binary Pattern Histogram Algorithm[LBPH] from OpenCV Library (For Face Identification)
 
 ## Introduction:
@@ -48,18 +49,24 @@ achieving high detection rates.
 
 **Face Identification :**
 Face Identification is performed using Local Binary Pattern Histograms(LBPH)
-Local Binary Pattern (LBP) is a simple yet very efficient texture operator which labels the pixels of an image by thresholding the neighborhood of each pixel and considers the result as a binary number and then to its decimal value as shown in figure below.
+Local Binary Pattern (LBP) is a simple yet very efficient texture operator which labels the 
+pixels of an image by thresholding the neighborhood of each pixel and considers the result 
+as a binary number and then to its decimal value as shown in figure below.
 
  ![image](https://user-images.githubusercontent.com/73170547/129152038-0fc88647-834f-4f4b-a2ff-320274689160.png)
  
  
-Now, using the image generated in the last step, we can use the Grid X and Grid Y parameters to divide the image into multiple grids, as can be seen in the following image:
+Now, using the image generated in the last step, we can use the Grid X and Grid Y parameters
+to divide the image into multiple grids, as can be seen in the following image:
 
 
 ![image](https://user-images.githubusercontent.com/73170547/129152080-e0d87293-c388-4c4c-8504-0c6bab523c1e.png)
 
 
-As we have an image in grayscale, each histogram (from each grid) will contain only 256 positions (0~255) representing the occurrences of each pixel intensity. we need to concatenate each histogram to create a new and bigger histogram. The final histogram represents the characteristics of the image original image.
+As we have an image in grayscale, each histogram (from each grid) will contain only 256 positions
+(0~255) representing the occurrences of each pixel intensity. we need to concatenate each histogram
+to create a new and bigger histogram. The final histogram represents the characteristics of the 
+image original image.
 
 
 
