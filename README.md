@@ -3,7 +3,8 @@
   This project makes use of various machine learning models to identify criminal/suspect faces 
   effectively in live video stream of a lighting-controlled environment. The goal of this project
   is to help law enforcement agencies to ease their work of monitoring suspects in real-time.
-  
+
+###### Author: Jagadeeswar 
 ###### The Project is implemented in Python
   
 ### ML Libraries used
