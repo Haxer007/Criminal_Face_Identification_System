@@ -4,8 +4,7 @@
   effectively in live video stream of a lighting-controlled environment. The goal of this project
   is to help law enforcement agencies to ease their work of monitoring suspects in real-time.
 
-###### Author: Jagadeeswar 
-###### The Project is implemented in Python
+######       Author: Jagadeeswar Ramanukolanu 
   
 ### ML Libraries used
    FaceMesh from MediaPipe Library (For Face Detection and Extraction)
