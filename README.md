@@ -27,7 +27,7 @@ The working of code can be boiled down to three main processes namely :
 * Face Detection - Running FaceMesh model from MediaPipe library on each Frame of video
 * Training LBPH Face recognizer - Training the LBPH recognizer on stored facial images.
 * Prediction— Check if the face recognizer predicts correctly for the detected face on test images 
-* or video.
+  or video.
 
 
 
