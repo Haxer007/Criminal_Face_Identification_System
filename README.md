@@ -24,8 +24,11 @@ ATM cameras and Street cameras to detect the criminals, if the face of the crimi
 is in the database of Police Department.
 
 The working of code can be boiled down to three main processes namely :
+* Face Detection - Running FaceMesh model from MediaPipe library on each Frame of video
+* Training LBPH Face recognizer - Training the LBPH recognizer on stored facial images.
+* Prediction— Check if the face recognizer predicts correctly for the detected face on test images 
+* or video.
 
-![image](https://user-images.githubusercontent.com/73170547/129153423-2988003f-98f5-413a-bebf-888d9f879d74.png)
 
 
 
@@ -42,9 +45,9 @@ achieving high detection rates.
  locations and predicts the approximate surface geometry via regression. The process can be
  easily visualized in the example below
  
- 
- ![image](https://user-images.githubusercontent.com/73170547/129151914-4ab0915f-3719-4b16-801e-1189027b5861.png)
- 
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129151914-4ab0915f-3719-4b16-801e-1189027b5861.png">
+</p> 
 
 
 **Face Identification :**
@@ -53,14 +56,20 @@ Local Binary Pattern (LBP) is a simple yet very efficient texture operator whic
 pixels of an image by thresholding the neighborhood of each pixel and considers the result 
 as a binary number and then to its decimal value as shown in figure below.
 
- ![image](https://user-images.githubusercontent.com/73170547/129152038-0fc88647-834f-4f4b-a2ff-320274689160.png)
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129152038-0fc88647-834f-4f4b-a2ff-320274689160.png">
+</p> 
+
  
  
 Now, using the image generated in the last step, we can use the Grid X and Grid Y parameters
 to divide the image into multiple grids, as can be seen in the following image:
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129152080-e0d87293-c388-4c4c-8504-0c6bab523c1e.png">
+</p> 
 
-![image](https://user-images.githubusercontent.com/73170547/129152080-e0d87293-c388-4c4c-8504-0c6bab523c1e.png)
+
 
 
 As we have an image in grayscale, each histogram (from each grid) will contain only 256 positions
@@ -73,13 +82,17 @@ image original image.
 **Code Input User Interface:**
 
 
-![image](https://user-images.githubusercontent.com/73170547/129152196-c59df14b-4ca1-4c68-be55-a7b9ebeec9f2.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129152196-c59df14b-4ca1-4c68-be55-a7b9ebeec9f2.png">
+</p> 
 
 We can register criminal using a video URL or WebCam.
 Registering criminal process goes like this when using Osama.mp4 video file:
 
 
-![image](https://user-images.githubusercontent.com/73170547/129152801-91ca0688-4b08-4d8d-b310-9cb7d6938ab4.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129152801-91ca0688-4b08-4d8d-b310-9cb7d6938ab4.png">
+</p> 
 
 
 We need to press key "C" on keyboard to capture sample at that instant.
@@ -88,13 +101,17 @@ We need to press key "C" on keyboard to capture sample at that instant.
 The Identification goes like this when using Demo.mp4 video file: 
 
 
-![image](https://user-images.githubusercontent.com/73170547/129152609-599ff4ef-2dd0-4fc9-9b34-8fd4015a1794.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129152609-599ff4ef-2dd0-4fc9-9b34-8fd4015a1794.png">
+</p> 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129153155-0f79a3e1-8983-4f56-8cac-cd233cd11550.png">
+</p> 
 
-![image](https://user-images.githubusercontent.com/73170547/129153155-0f79a3e1-8983-4f56-8cac-cd233cd11550.png)
-
-
-![image](https://user-images.githubusercontent.com/73170547/129153246-2fcb01df-650d-4455-a840-8e2483918726.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73170547/129153246-2fcb01df-650d-4455-a840-8e2483918726.png">
+</p> 
 
 
 
