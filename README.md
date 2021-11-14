@@ -79,7 +79,7 @@ image original image.
 
 
 
-**Code Input User Interface:**
+**Input User Interface:**
 
 
 <p align="center">
