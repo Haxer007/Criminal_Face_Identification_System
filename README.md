@@ -8,8 +8,10 @@
   
 ### ML Libraries used
    FaceMesh from MediaPipe Library (For Face Detection and Extraction)
+   [More Info](https://google.github.io/mediapipe/solutions/face_mesh.html)
    
    Local Binary Pattern Histogram Algorithm[LBPH] from OpenCV Library (For Face Identification)
+   [More Info](https://towardsdatascience.com/face-recognition-how-lbph-works-90ec258c3d6b)
 
 ## Introduction:
 **What is Face Identification System?**
